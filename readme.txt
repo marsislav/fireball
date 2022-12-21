@@ -33,7 +33,7 @@ Fireball doesnt collect your data.
 
 == Copyright ==
 
-Fireball is WordPress free Wordpress Theme, 2022 marsislav.net
+Fireball is free Wordpress Theme developed by Marsislav in 2022.
 Fireball is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
