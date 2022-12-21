@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html class="ltr" dir="ltr" style="transform: none;">
+<html class="ltr" dir="ltr" <?php language_attributes(); ?>">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset');?>">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
     <?php wp_head();?>
-
 </head>
 
 <body <?php body_class('index home')?>">
@@ -26,11 +25,9 @@
                             <div class="widget LinkList" data-version="2" id="LinkList72">
                                 <div class="widget-content">
                                     <ul>
-                                        <li><a href="https://cream-way2themes.blogspot.com/">Home</a></li>
-                                        <li><a href="https://cream-way2themes.blogspot.com/p/about.html">About</a></li>
-                                        <li><a
-                                                href="https://cream-way2themes.blogspot.com/p/contact-us.html">Contact</a>
-                                        </li>
+                                        <?php wp_nav_menu(array (
+                        'theme_location'=>'top'
+                    ));?>
                                     </ul>
                                 </div>
                             </div>
@@ -40,17 +37,23 @@
                             <div class="widget LinkList" data-version="2" id="LinkList73">
                                 <div class="widget-content">
                                     <ul>
-                                        <li class="facebook"><a href="https://fb.com/soratemplates" target="_blank"
-                                                title="facebook"></a></li>
-                                        <li class="twitter"><a href="https://cream-way2themes.blogspot.com/#"
-                                                target="_blank" title="twitter"></a></li>
-                                        <li class="instagram"><a href="https://cream-way2themes.blogspot.com/#"
-                                                target="_blank" title="instagram"></a></li>
-                                        <li class="pinterest"><a href="https://cream-way2themes.blogspot.com/#"
-                                                target="_blank" title="pinterest"></a></li>
-                                        <li class="gplus"><a href="https://cream-way2themes.blogspot.com/#"
-                                                target="_blank" title="gplus"></a></li>
-                                    </ul>
+                                        <ul><?php if(get_theme_mod('fireball_facebook_handle')){?>
+                                            <li class="facebook"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_facebook_handle'))?>"
+                                                    target="_blank" title="facebook"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_twitter_handle')){?>
+                                            <li class="twitter"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_twitter_handle'));?>"
+                                                    target="_blank" title="twitter"></a></li>
+                                            <?php } ?>
+                                            <li class="instagram"><a href="https://cream-way2themes.blogspot.com/#"
+                                                    target="_blank" title="instagram"></a></li>
+                                            <li class="pinterest"><a href="https://cream-way2themes.blogspot.com/#"
+                                                    target="_blank" title="pinterest"></a></li>
+                                            <li class="gplus"><a href="https://cream-way2themes.blogspot.com/#"
+                                                    target="_blank" title="gplus"></a></li>
+                                        </ul>
                                 </div>
                             </div>
                         </div>

@@ -200,22 +200,10 @@
     </div>
 </div>
 </div>
-<!-- Main Scripts 
-<script src="./Cream_files/jquery.min.js.download" type="text/javascript"></script>
--->
-<!-- Theme Functions JS -->
-
 <!-- Overlay and Back To Top -->
 <div class="back-top" title="Back to Top" style="display: none;"></div>
 
-
-
-
-<div id="fb-root" class=" fb_reset">
-    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
-        <div></div>
-    </div>
-</div>
+<?php wp_footer(); ?>
 </body>
 
 </html>

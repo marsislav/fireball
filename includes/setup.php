@@ -11,6 +11,16 @@ function fireball_setup_theme() {
         'gallery',
         'caption'
     ) );
+
+
+    function hs21_register_menus(){
+        register_nav_menus(array (
+            'top'=>esc_html__('Top menu', 'fireball'),
+            'main'=>esc_html__('Main menu', 'fireball'),
+        ));
+    }
     
-    register_nav_menu('main', __('Main Menu', 'fireball'));
+    add_action ('init', 'hs21_register_menus');
+   
+
 }

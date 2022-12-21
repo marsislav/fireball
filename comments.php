@@ -10,7 +10,7 @@ if (post_password_required()) {
         <?php
             printf(
                 esc_html(_n('%1$s Reply to "%1$s"',
-                    '%1$s Replies to "%1$s"', get_comments_number(), 'hs21'
+                    '%1$s Replies to "%1$s"', get_comments_number(), 'fireball'
                 )),
                 number_format_i18n(get_comments_number(), get_the_title())
             ) ?>
@@ -20,7 +20,7 @@ if (post_password_required()) {
                 'short_ping'=>false,
                 'avatar_size' => 200,
                 'reply_text' => 'Reply',
-                'callback' => 'hs21_comment_callback'
+                'callback' => 'fireball_comment_callback'
             )); ?>
     </ul>
     <?php the_comments_pagination(); ?>
@@ -28,7 +28,7 @@ if (post_password_required()) {
     <?php
     if (!comments_open() && get_comments_nuber()) { ?>
     <p class="comments-closed">
-        <?php esc_html_e('Comments are closed for this post', 'hs2'); ?>
+        <?php esc_html_e('Comments are closed for this post', 'fireball'); ?>
     </p>
     <?php } ?>
     <?php comment_form(); ?>
