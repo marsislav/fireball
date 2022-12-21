@@ -1,5 +1,5 @@
 === Fireball ===
-Contributors: wordpressdotorg
+Contributor: Marsislav
 Requires at least: 5.3
 Tested up to: 6.1
 Requires PHP: 5.6
