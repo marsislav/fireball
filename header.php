@@ -8,6 +8,7 @@
 </head>
 
 <body <?php body_class('index home')?>">
+    <?php wp_body_open(); ?>
     <div class="theme-options">
         <div class="sora-panel section" id="sora-panel" name="Theme Options">
             <div class="widget LinkList" data-version="2" id="LinkList70">

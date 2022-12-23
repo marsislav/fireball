@@ -1,6 +1,9 @@
 <?php
 function fireball_enqueue () {
 
+    wp_register_style( 'fireball_bootstrap', get_template_directory_uri().'/assets/css/bootstrap-grid.min.css'); 
+    wp_enqueue_style( 'fireball_bootstrap' );
+
     wp_register_style( 'fireball_main', get_template_directory_uri().'/assets/css/main.css'); 
     wp_enqueue_style( 'fireball_main' );
 
