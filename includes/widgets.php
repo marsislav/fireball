@@ -11,9 +11,10 @@ register_sidebar([
 ]);
 }
 //Footer widgets
-$footer_layout='3,3,3,3';
+$footer_layout=sanitize_text_field(get_theme_mod('fireball_footer_layout', '3,3,3,3'));
+$footer_layout=preg_replace('/\s+/', '', $footer_layout);
 $columns=explode(',', $footer_layout);
-$footer_bg='dark';
+/*$footer_bg='dark';
 $widget_theme='';
 if ($footer_bg=='light'){
         $widget_theme='footer-widgets-dark';
@@ -21,7 +22,7 @@ if ($footer_bg=='light'){
 else {
         $widget_theme='footer-widgets-light';
 }
-
+*/
 
 foreach ($columns as $i =>$column) {
 

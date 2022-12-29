@@ -20,7 +20,27 @@ $wp_customize->add_section('fireball_footer_options', array(
         'section'=>'fireball_footer_options'
     ));
 
-    //Footer Background
+    //footer Columns
+
+    $wp_customize->add_setting('fireball_footer_layout', array (
+        'default'=>'3,3,3,3',
+        'sanitize_callback'=>'sanitize_text_field',
+        'validate_vallback'=>'fireball_validate_footer_layout'
+    ));
+
+    $wp_customize->add_control('fireball_footer_layout', array (
+        'type'=>'text',
+        'label'=>esc_html__('Footer layout','hs21'),
+        'section'=>'fireball_footer_options'
+
+    ));
+
+    
+    
+
+
+
+    /*Footer Background
 $wp_customize->add_setting('fireball_footer_bg', array (
     'default'=>'dark',
     'sanitize_callback'=>'fireball_sanitize_footer_bgr'
@@ -34,7 +54,7 @@ $wp_customize->add_setting('fireball_footer_bg', array (
             'dark'=>esc_html__('Dark', 'fireball'),
             'section'=>'fireball_footer_options'
         )
-    ));
+    ));*/
 
 
 }

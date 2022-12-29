@@ -1,6 +1,8 @@
 <!-- Footer Wrapper -->
 <?php 
-$footer_layout='3,3,3,3';
+$footer_layout=sanitize_text_field(get_theme_mod('fireball_footer_layout', '3,3,3,3'));
+$footer_layout=preg_replace('/\s+/','', $footer_layout);
+
 $columns=explode(',', $footer_layout);
 $footer_bg='dark';
 $widgets_active=false;
