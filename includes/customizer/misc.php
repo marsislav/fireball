@@ -25,12 +25,12 @@ $wp_customize->add_section('fireball_footer_options', array(
     $wp_customize->add_setting('fireball_footer_layout', array (
         'default'=>'3,3,3,3',
         'sanitize_callback'=>'sanitize_text_field',
-        'validate_vallback'=>'fireball_validate_footer_layout'
+        'validate_callback'=>'fireball_validate_footer_layout'
     ));
 
     $wp_customize->add_control('fireball_footer_layout', array (
         'type'=>'text',
-        'label'=>esc_html__('Footer layout','hs21'),
+        'label'=>esc_html__('Footer layout','fireball'),
         'section'=>'fireball_footer_options'
 
     ));
@@ -77,3 +77,12 @@ function fireball_sanitize_footer_bgr ($input) {
     }
     return 'dark';
 }
+
+//Validate footer layout
+
+function fireball_validate_footer_layout ($validity, $value) {
+    if(!preg_match('/^([1-9]|1[012])(,([1-9]|1[012]))*$/', $value)) {
+        $validity->add('invalid_footer_layout', esc_html__( 'Footer layout is invalid', 'fireball' ));
+    }
+       return $validity;
+   }
