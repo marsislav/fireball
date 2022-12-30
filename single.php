@@ -16,7 +16,7 @@
 
                         }
                         else {
-                        _e('<h5>Sorry, posts yet!', 'fireball</h5>');
+                        _e('<h5>Sorry, posts yet!</h5>', 'fireball');
                         }
                         ?>
 

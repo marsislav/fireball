@@ -15,17 +15,12 @@ function fireball_enqueue () {
     $main_color                =   get_theme_mod( 'fireball_main_color' );
     wp_add_inline_style(
         'fireball_main',
-        'a{ color: ' . $main_color . '; border-color: '. $main_color. '; }'
+        'a, a.read-more{ color: ' . $main_color . '; border-color: '. $main_color. '; }'
     );
-    wp_add_inline_style(
-        'fireball_main',
-        '.header-menu{ background-color: ' . $main_color . '; }'
-    );
-  
    
     wp_add_inline_style(
         'fireball_main',
-        '.sb-icon-search, .sb-search-input, .sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search{ background-color: ' . $main_color . '; }'
+        '.post-tag, .header-menu, .sb-icon-search, .sb-search-input, .sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search{ background-color: ' . $main_color . '; }'
     );
     /*End custom main color */
 
