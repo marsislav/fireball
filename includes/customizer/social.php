@@ -57,6 +57,22 @@ function fireball_social_customizer_section($wp_customize) {
                 'settings'=>'fireball_twitter_handle'
                 ))
                 );
+
+                $wp_customize->add_setting('fireball_pinterest_handle', [
+                    'default'=>'',
+                    'sanitize_callback'=>'sanitize_text_field',
+                ]);
+             
+                $wp_customize->add_control(new WP_Customize_Control(
+                    $wp_customize,
+                    'fireball_social_pintereset_input',
+                    array (
+                        'type'=>'text',
+                    'label'=>esc_html__('Pinterest','fireball'),
+                    'section'=>'fireball_social_section',
+                    'settings'=>'fireball_pinterest_handle'
+                    ))
+                    );
     
                 $wp_customize->add_setting('fireball_youtube_handle', [
                     'default'=>'',

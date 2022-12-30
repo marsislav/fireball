@@ -1,3 +1,4 @@
+
 (function ($) {
   $.fn.theiaStickySidebar = function (options) {
     var defaults = {

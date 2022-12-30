@@ -308,9 +308,6 @@ body {
 .social .twitter a:before {
   content: "\f099";
 }
-.social .gplus a:before {
-  content: "\f0d5";
-}
 .social .rss a:before {
   content: "\f09e";
 }
@@ -389,7 +386,7 @@ body {
 .social-color .twitter a {
   background-color: #00acee;
 }
-.social-color .gplus a {
+.social-color .viber a {
   background-color: #db4a39;
 }
 .social-color .youtube a {
@@ -505,28 +502,13 @@ body {
   font-size: 12px;
   margin: 5px 0 0;
 }
-.header-ads {
-  position: relative;
-  float: right;
-}
-.header-ads .widget > .widget-title {
-  display: none;
-}
-.header-ads .widget {
-  max-width: 100%;
-}
-.header-ads .widget .widget-content {
-  width: 728px;
-  max-width: 100%;
-  max-height: 90px;
-  line-height: 1;
-}
+
 .header-menu {
   position: relative;
   width: 100%;
   height: 48px;
   background-color: #025746;
-  z-index: 10;
+  z-index: 0;
   font-size: 13px;
   margin: 0;
 }
@@ -545,7 +527,7 @@ body {
 #main-menu {
   position: relative;
   height: 48px;
-  z-index: 15;
+  z-index: 0;
 }
 #main-menu ul > li {
   float: left;
@@ -648,49 +630,133 @@ body {
 #main-menu ul ul {
   transition: all 0.17s ease;
 }
-.mega-menu-inner .mega-item {
-  float: left;
-  width: 25%;
-  box-sizing: border-box;
-  padding: 0 10px;
+
+/*Search*/
+
+.sb-search {
+	position: absolute;
+	top:-48px;
+  right:0;
+	width: 0%;
+	min-width: 60px;
+	height: 48px;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
 }
-.mega-menu-inner .mega-content {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 0;
+/* The input element on the search element  */
+.sb-search-input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background: #025746;
+	width: 100%;
+	height: 48px;
+	margin: 0;
+	z-index: 10;
+	padding: 20px 65px 20px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	color: #fff;
 }
-.mega-content .post-image-wrap {
-  width: 100%;
-  height: 140px;
-  overflow: hidden;
+
+
+input[type="search"].sb-search-input {
+	/* remove special webkit formatting on the search input */
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
 }
-.mega-content .post-image-link {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: block;
-  position: relative;
-  overflow: hidden;
+
+/* browser specific placholder text color */
+.sb-search-input::-webkit-input-placeholder {
+	color: #efb480;
 }
-.mega-content .post-title {
-  position: relative;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5em;
-  margin: 7px 0 5px;
+
+.sb-search-input:-moz-placeholder {
+	color: #efb480;
 }
-.mega-content .post-title a {
-  display: block;
-  color: #fff;
-  transition: color 0.17s;
+
+.sb-search-input::-moz-placeholder {
+	color: #efb480;
 }
-.mega-content:hover .post-title a {
-  color: #025746;
+
+.sb-search-input:-ms-input-placeholder {
+	color: #efb480;
 }
-.mega-content .post-meta {
-  color: #aaa;
+/* format the search button and submit to share the same size and space */
+.sb-icon-search,
+.sb-search-submit  {
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 48px;
+	text-align: center;
+	cursor: pointer;
 }
+/* hide the submit but leave it clickable */
+.sb-search-submit {
+	background: #fff; /* IE needs this */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+    filter: alpha(opacity=0); /* IE 5-7 */
+    opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: -1;
+}
+
+/* format the search icon */
+.sb-icon-search {
+	color: #fff;
+	background: #025746;
+	z-index: 90;
+	font-size: 22px;
+  font-family: FontAwesome;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* add the magnifying glass character from the icomoon font as a before pseudo element */
+.sb-icon-search:before {
+	content: "\f002";
+}
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+	width: 100%;
+}
+
+/* add the "active" color on the search button */
+.sb-search.sb-search-open .sb-icon-search,
+.no-js .sb-search .sb-icon-search {
+	background: #025746;
+	color: #fff;
+	z-index: 11;
+}
+
+/* adjust z-index to make sure the search submit is clikacble and not below any other elements */
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}
+
+/*End of search*/
+
 .no-posts {
   float: left;
   width: 100%;
@@ -698,77 +764,8 @@ body {
   line-height: 100px;
   text-align: center;
 }
-.mega-menu .no-posts {
-  line-height: 60px;
-  color: #333333;
-}
-.show-search,
-.hide-search {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  z-index: 20;
-  color: #ffffff;
-  font-size: 15px;
-  text-align: right;
-  cursor: pointer;
-  transition: color 0.17s ease;
-}
-.show-search:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-weight: 400;
-}
-.hide-search:before {
-  content: "\f00d";
-  font-family: FontAwesome;
-  font-weight: 400;
-}
-.show-search:hover,
-.hide-search:hover {
-  color: #fff;
-}
-#nav-search {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 48px;
-  z-index: 99;
-  background-color: #025746;
-  box-sizing: border-box;
-  padding: 0;
-}
-#nav-search .search-form {
-  width: 100%;
-  height: 48px;
-  background-color: rgba(0, 0, 0, 0);
-  line-height: 48px;
-  overflow: hidden;
-  padding: 0;
-}
-#nav-search .search-input {
-  width: 100%;
-  height: 48px;
-  font-family: inherit;
-  color: #ffffff;
-  margin: 0;
-  padding: 0 70px 0 0;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 14px;
-  font-weight: 400;
-  box-sizing: border-box;
-  border: 0;
-}
-#nav-search .search-input:focus {
-  color: #ffffff;
-  outline: none;
-}
+
+
 .slide-menu-toggle {
   display: none;
   position: absolute;
@@ -1702,15 +1699,7 @@ ul.related-posts {
 #comments {
   margin: 0;
 }
-#gpluscomments {
-  float: left !important;
-  width: 100% !important;
-  margin: 0 0 25px !important;
-}
-#gpluscomments iframe {
-  float: left !important;
-  width: 100%;
-}
+
 .comments {
   display: block;
   clear: both;

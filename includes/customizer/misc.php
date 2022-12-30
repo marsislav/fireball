@@ -35,8 +35,64 @@ $wp_customize->add_section('fireball_footer_options', array(
 
     ));
 
-    
-    
+
+    $wp_customize->add_setting( 'fireball_footer_tos_page', array(
+        'default'       =>  0,
+        'sanitize_callback'=>'sanitize_text_field',
+    ));
+
+    $wp_customize->add_setting( 'fireball_footer_privacy_page', array(
+        'default'       =>  0,
+        'sanitize_callback'=>'sanitize_text_field',
+    ));
+
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'fireball_footer_tos_page_input',
+        array(
+            'label'                 =>  __( 'Footer TOS Page', 'fireball' ),
+            'section'               => 'fireball_footer_options',
+            'settings'              => 'fireball_footer_tos_page',
+            'type'                  =>  'dropdown-pages'
+        )
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'fireball_footer_privacy_page_input',
+        array(
+            'label'                 =>  __( 'Footer Privacy Policy Page', 'fireball' ),
+            'section'               => 'fireball_footer_options',
+            'settings'              => 'fireball_footer_privacy_page',
+            'type'                  =>  'dropdown-pages'
+        )
+    ));
+/*
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control( 
+            $wp_customize, 
+            'fireball_read_more_color_input', 
+            array(
+                'label'      => __( 'Read more link color', 'fireball' ),
+                'section'    => 'fireball_misc_section',
+                'settings'   => 'fireball_read_more_color',
+            )
+        ) 
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Upload_Control( 
+            $wp_customize, 
+            'fireball_report_file_input', 
+            array(
+                'label'      => __( 'File Report', 'fireball' ),
+                'section'    => 'fireball_misc_section',
+                'settings'   => 'fireball_report_file',
+            ) 
+        ) 
+    );*/
+    /*END FOR TEST */
 
 
 

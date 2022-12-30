@@ -41,19 +41,48 @@
                                         <ul><?php if(get_theme_mod('fireball_facebook_handle')){?>
                                             <li class="facebook"><a
                                                     href="<?php echo esc_url(get_theme_mod('fireball_facebook_handle'))?>"
-                                                    target="_blank" title="facebook"></a></li>
+                                                    target="_blank" title="Facebook"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_instagram_handle')){?>
+                                            <li class="instagram"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_instagram_handle'))?>"
+                                                    target="_blank" title="Instagram"></a></li>
                                             <?php }?>
                                             <?php if(get_theme_mod('fireball_twitter_handle')){?>
                                             <li class="twitter"><a
                                                     href="<?php echo esc_url(get_theme_mod('fireball_twitter_handle'));?>"
-                                                    target="_blank" title="twitter"></a></li>
+                                                    target="_blank" title="Twitter"></a></li>
                                             <?php } ?>
-                                            <li class="instagram"><a href="https://cream-way2themes.blogspot.com/#"
-                                                    target="_blank" title="instagram"></a></li>
-                                            <li class="pinterest"><a href="https://cream-way2themes.blogspot.com/#"
-                                                    target="_blank" title="pinterest"></a></li>
-                                            <li class="gplus"><a href="https://cream-way2themes.blogspot.com/#"
-                                                    target="_blank" title="gplus"></a></li>
+                                            <?php if(get_theme_mod('fireball_pinterest_handle')){?>
+                                            <li class="pinterest"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_pinterest_handle'));?>"
+                                                    target="_blank" title="Pinterest"></a></li>
+                                            <?php } ?>
+                                            <?php if(get_theme_mod('fireball_youtube_handle')){?>
+                                            <li class="youtube"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_youtube_handle'));?>"
+                                                    target="_blank" title="Youtube"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_viber_handle')){?>
+                                            <li class="fab fa-viber"><a href="
+                                                viber://chat?number=<?php echo get_theme_mod('hs21_viber_handle')?>"
+                                                    title="Viber"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_whatsapp_handle')){?>
+                                            <li class="whatsapp"><a
+                                                    href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('hs21_whatsapp_handle')?>"
+                                                    title="Whatsapp"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_github_handle')){?>
+                                            <li class="github"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_github_handle'));?>"
+                                                    target="_blank" title="Github"></a></li>
+                                            <?php }?>
+                                            <?php if(get_theme_mod('fireball_github_handle')){?>
+                                            <li class="github"><a
+                                                    href="<?php echo esc_url(get_theme_mod('fireball_github_handle'));?>"
+                                                    target="_blank" title="Github"></a></li>
+                                            <?php }?>
                                         </ul>
                                 </div>
                             </div>
@@ -82,49 +111,19 @@
                         </div>
                     </div>
                     <div class="header-menu">
-                        <!--<div class="mobile-menu">
+                        <div class="mobile-menu">
                             <ul id="main-menu-nav" role="menubar">
-                                <li><a href="https://cream-way2themes.blogspot.com/" role="menuitem">Home</a></li>
-                                <li class="has-sub"><a href="https://cream-way2themes.blogspot.com/#"
-                                        role="menuitem">Features</a>
-                                    <ul class="sub-menu m-sub">
-                                        <li class="has-sub"><a href="https://cream-way2themes.blogspot.com/#"
-                                                role="menuitem">Multi DropDown</a>
-                                            <ul class="sub-menu2 m-sub">
-                                                <li><a href="https://cream-way2themes.blogspot.com/#"
-                                                        role="menuitem">DropDown 1</a></li>
-                                                <li><a href="https://cream-way2themes.blogspot.com/#"
-                                                        role="menuitem">DropDown 2</a></li>
-                                                <li><a href="https://cream-way2themes.blogspot.com/#"
-                                                        role="menuitem">DropDown 3</a></li>
-                                            </ul>
-                                            <div class="submenu-toggle"></div>
-                                        </li>
-                                        <li><a href="https://cream-way2themes.blogspot.com/p/post-format-and-page-markup.html"
-                                                role="menuitem">ShortCodes</a></li>
-                                        <li><a href="https://www.sorabloggingtips.com/2017/01/how-to-add-sitemap-widget-in-blogspot-blogs.html"
-                                                role="menuitem">SiteMap</a></li>
-                                        <li><a href="https://cream-way2themes.blogspot.com/soratemplates"
-                                                role="menuitem">Error Page</a></li>
-                                    </ul>
-                                    <div class="submenu-toggle"></div>
-                                </li>
-
-
-
-
-
-
-
-                                <li><a href="https://cream-way2themes.blogspot.com/search/label/recent?&amp;max-results=6"
-                                        role="menuitem">Mega Menu</a></li>
-                                <li><a href="https://www.sorabloggingtips.com/2018/10/how-to-setup-cream-blogger-template.html"
-                                        role="menuitem">Documentation</a></li>
-                                <li><a href="https://youtu.be/UbmAZyUAzmU" role="menuitem">Video Documentation</a></li>
-                                <li><a href="http://www.way2themes.com/2018/10/cream-fashion-magazine-blogger-template.html"
-                                        role="menuitem">Download This Template</a></li>
+                                <?php 
+                                        if(has_nav_menu('main')){
+                                            wp_nav_menu([
+                                                'theme_location'=>'main',
+                                                'container'=>'li',
+                                                'fallback_cb'=>__('Main menu', 'fireball'),
+                                                'depth'=>1
+                                            ]);
+                                        }?>
                             </ul>
-                        </div>-->
+                        </div>
                         <div class="container row">
                             <span class="slide-menu-toggle"></span>
                             <div class="main-menu section" id="main-menu" name="Main Menu">
@@ -142,16 +141,14 @@
                                     </ul>
 
                                 </div>
+                               
                             </div>
-                            <div id="nav-search">
-                                <form action="https://cream-way2themes.blogspot.com/search" class="search-form"
-                                    role="search">
-                                    <input autocomplete="off" class="search-input" name="q"
-                                        placeholder="Search this blog" type="search" value="">
-                                    <span class="hide-search"></span>
-                                </form>
+                            <div id="nav-search" style="position:relative">
+                                <?php get_search_form( );?>
                             </div>
-                            <span class="show-search"></span>
+                            
+                            
+
                         </div>
                     </div>
                 </div>
