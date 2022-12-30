@@ -10,6 +10,25 @@ function fireball_enqueue () {
     wp_register_style( 'fireball_fa', get_template_directory_uri().'/assets/css/all.min.css'); 
     wp_enqueue_style( 'fireball_fa' );
 
+
+    /*Custom Main color */
+    $main_color                =   get_theme_mod( 'fireball_main_color' );
+    wp_add_inline_style(
+        'fireball_main',
+        'a{ color: ' . $main_color . '; border-color: '. $main_color. '; }'
+    );
+    wp_add_inline_style(
+        'fireball_main',
+        '.header-menu{ background-color: ' . $main_color . '; }'
+    );
+  
+   
+    wp_add_inline_style(
+        'fireball_main',
+        '.sb-icon-search, .sb-search-input, .sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search{ background-color: ' . $main_color . '; }'
+    );
+    /*End custom main color */
+
     wp_register_script( 'fireball_modernizr',get_template_directory_uri().'/assets/js/modernizr.custom.js', array(), false, true );
     wp_register_script( 'fireball_classie',get_template_directory_uri().'/assets/js/classie.js', array(), false, true );
     wp_register_script( 'fireball_uisearch',get_template_directory_uri().'/assets/js/uisearch.js', array(), false, false );

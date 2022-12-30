@@ -68,19 +68,25 @@ $wp_customize->add_section('fireball_footer_options', array(
             'type'                  =>  'dropdown-pages'
         )
     ));
-/*
+//
+
+$wp_customize->add_setting( 'fireball_main_color', [
+    'default'       =>  '#025746',
+    'sanitize_callback'=>'sanitize_hex_color',
+]); 
+
     $wp_customize->add_control(
         new WP_Customize_Color_Control( 
             $wp_customize, 
-            'fireball_read_more_color_input', 
+            'fireball_main_color_input', 
             array(
-                'label'      => __( 'Read more link color', 'fireball' ),
-                'section'    => 'fireball_misc_section',
-                'settings'   => 'fireball_read_more_color',
+                'label'      => __( 'Main color', 'fireball' ),
+                'section'    => 'fireball_footer_options',
+                'settings'   => 'fireball_main_color',
             )
         ) 
     );
-
+/*
     $wp_customize->add_control(
         new WP_Customize_Upload_Control( 
             $wp_customize, 

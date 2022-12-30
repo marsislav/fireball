@@ -31,8 +31,8 @@ foreach ($columns as $i=>$column){
     <div class="clearfix"></div>
     <div id="sub-footer-wrapper">
         <div class="container row">
-            <div class="copyright-area copuright-bgr-<?php echo $footer_bg; ?>">
-                //bgr here
+            <div class="copyright-area copyright-bgr-<?php echo $footer_bg; ?>">
+                <!--bgr here-->
                 <?php 
                 $allowed=array ('a'=>array(
                     'href'=>array(),
@@ -44,6 +44,23 @@ foreach ($columns as $i=>$column){
                     echo wp_kses(get_theme_mod('fireball_site_info'), $allowed);} 
                      else {echo "Theme developer: Marsislav";}
                      ?>
+
+            </div>
+            <div class="footer-links">
+            <?php
+
+if( get_theme_mod( 'fireball_footer_tos_page' ) ){
+    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_tos_page' ) ); ?>"><?php _e('Terms of Use', 'fireball');?></a><?php
+}
+
+?> 
+<?php
+
+if( get_theme_mod( 'fireball_footer_privacy_page' ) ){
+    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_privacy_page' ) ); ?>"><?php _e('Privacy Policy', 'fireball');?></a><?php
+}
+
+?>
             </div>
         </div>
     </div>
