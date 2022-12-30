@@ -46,11 +46,11 @@ foreach ($columns as $i=>$column){
                      ?>
 
             </div>
-            <div class="footer-links">
+            <div class="footer-links aligncenter">
             <?php
 
 if( get_theme_mod( 'fireball_footer_tos_page' ) ){
-    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_tos_page' ) ); ?>"><?php _e('Terms of Use', 'fireball');?></a><?php
+    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_tos_page' ) ); ?>"><?php _e('Terms of Use', 'fireball');?> / </a><?php
 }
 
 ?> 

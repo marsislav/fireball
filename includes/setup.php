@@ -11,6 +11,12 @@ function fireball_setup_theme() {
         'gallery',
         'caption'
     ) );
+    add_theme_support( 'custom-header', [
+        'default-color'=>'#fff',
+        'default-image'=>'',
+        'flex-height'=>true,
+        'default-repeat'=>'repeat',
+    ]);
 
 
     function hs21_register_menus(){

@@ -31,7 +31,7 @@ register_sidebar([
         'name'=>sprintf(esc_html__('Footer widgets column %s', 'fireball'),$i+1),
         'id'=>'fireball_footer_sidebar-'.($i+1),
         'description'=>esc_html__('Footer widgets', 'fireball'),
-        'before_widget'=>'<div id=""%1$s" class="footer-widget 2$s'. $widget_theme . '">',
+        'before_widget'=>'<div id=""%1$s" class="footer-widget 2$s'. /*$widget_theme .*/ '">',
                 'after_widget'=>'</div>',
                 'before_title'=>'<div class="widget-title"><h3 class="title">',
                 'after_title'=>'</h3></div>',

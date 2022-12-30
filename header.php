@@ -11,12 +11,6 @@
     <?php wp_body_open(); ?>
     <div class="theme-options">
         <div class="sora-panel section" id="sora-panel" name="Theme Options">
-            <div class="widget LinkList" data-version="2" id="LinkList70">
-
-            </div>
-            <div class="widget LinkList" data-version="2" id="LinkList71">
-
-            </div>
             <!-- Outer Wrapper -->
             <div id="outer-wrapper" style="transform: none;">
                 <!-- Main Top Bar -->
@@ -91,7 +85,7 @@
                 </div>
                 <!-- Header Wrapper -->
                 <div id="header-wrap">
-                    <div class="header-header">
+                    <header class="header-header" style="background-image:url(<?php header_image();?> )">
                         <div class="container row">
                             <div class="header-logo section" id="header-logo" name="Header Logo">
                                 <div class="widget Header" data-version="2" id="Header1">
@@ -109,7 +103,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </header>
                     <div class="header-menu">
                         <div class="mobile-menu">
                             <ul id="main-menu-nav" role="menubar">
@@ -154,5 +148,5 @@
                 </div>
                 <div class="clearfix"></div>
                 <!-- Content Wrapper -->
-                <div class="row" id="content-wrapper" style="transform: none;">
-                    <div class="container" style="transform: none;">
+                <div class="row" id="content-wrapper">
+                    <div class="container">
