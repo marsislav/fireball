@@ -2,8 +2,8 @@
 
 
 
-    <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
-        <div class="sidebar common-widget section" id="sidebar1"></div>
+    <div>
+        <div class="sidebar common-widget section"></div>
         <div class="sidebar section">
             <?php
             if(is_active_sidebar('fireball_sidebar')) {

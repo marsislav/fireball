@@ -47,24 +47,23 @@ foreach ($columns as $i=>$column){
 
             </div>
             <div class="footer-links aligncenter">
-            <?php
+                <?php
 
 if( get_theme_mod( 'fireball_footer_tos_page' ) ){
-    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_tos_page' ) ); ?>"><?php _e('Terms of Use', 'fireball');?> / </a><?php
+    ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_tos_page' ) ); ?>"><?php _e('Terms of Use', 'fireball');?>
+                    / </a><?php
 }
 
-?> 
-<?php
+?>
+                <?php
 
 if( get_theme_mod( 'fireball_footer_privacy_page' ) ){
     ?><a href="<?php the_permalink( get_theme_mod( 'fireball_footer_privacy_page' ) ); ?>"><?php _e('Privacy Policy', 'fireball');?></a><?php
 }
 
 ?>
+
             </div>
-        </div>
-    </div>
-    </div>
 </footer>
 <!-- Overlay and Back To Top -->
 <div class="back-top" title="Back to Top" style="display: none;"></div>

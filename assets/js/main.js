@@ -1,5 +1,16 @@
 
 (function ($) {
+//
+  $(".slide-menu-toggle").on("click",function(){
+
+    $("#main-menu").css("display","block")
+    $("#dvAlbums").css("display","block")
+
+});
+//
+
+
+
   $.fn.theiaStickySidebar = function (options) {
     var defaults = {
       containerSelector: "",

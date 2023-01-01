@@ -1,4 +1,4 @@
-<div class="blog-post hentry index-post">
+<div class="blog-post index-post">
     <?php if (has_post_thumbnail()) {?>
     <div class="post-image-wrap">
         <a class="post-image-link" href="<?php the_permalink();?>">

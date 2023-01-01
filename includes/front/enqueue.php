@@ -20,7 +20,7 @@ function fireball_enqueue () {
    
     wp_add_inline_style(
         'fireball_main',
-        '.post-tag, .header-menu, .sb-icon-search, .sb-search-input, .sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search{ background-color: ' . $main_color . '; }'
+        '.title-wrap, .post-labels span,  .post-tag, .header-menu, .sb-icon-search, .sb-search-input, .sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search{ background-color: ' . $main_color . '; }'
     );
     /*End custom main color */
 
