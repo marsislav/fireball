@@ -20,10 +20,10 @@
         );
         wp_link_pages($link_pages_settings);?></p>
         <div class="post-labels">
-            <span><?php _e('Tags: ', 'fireball');?> </span>
+            <span class="tags"><?php _e('Tags:', 'fireball');?> </span> <span class="the-tags">
+                <?php the_tags('',' ');?></span>
             <div class="label-head Label">
-                <?php the_tags('',' ');?>
-                <div class="clearfix"></div>
+
                 <?php get_template_part('partials/post/author');?>
                 <?php get_template_part('partials/post/post-navigation');?>
                 <div class="clearfix"></div>

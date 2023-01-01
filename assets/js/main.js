@@ -1,12 +1,14 @@
 
 (function ($) {
 //
-  $(".slide-menu-toggle").on("click",function(){
 
-    $("#main-menu").css("display","block")
-    $("#dvAlbums").css("display","block")
-
+$(".slide-menu-toggle").click(function() {
+  console.log('clicked');
+  $("#main-menu").toggle();
+  $("#sb-search").toggle();
+  
 });
+
 //
 
 

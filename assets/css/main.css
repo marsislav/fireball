@@ -133,6 +133,10 @@ abbr {
 i, :before {
   font-family:FontAwesome;
 }
+
+:before{
+  margin-right:10px;
+}
 .separator a {
   clear: none !important;
   float: none !important;
@@ -173,7 +177,7 @@ border-bottom: 1px solid #eee;
   height: 34px;
   display: block;
   color: #025746;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 34px;
   text-transform: uppercase;
@@ -377,7 +381,7 @@ border-bottom: 1px solid #eee;
 #main-menu ul > li > a {
   position: relative;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 48px;
@@ -587,6 +591,7 @@ input[type="search"].sb-search-input {
 .post-image-link, .about-author .avatar-container, .comments .avatar-image-container {
   background-color: rgba(155, 155, 155, 0.07);
   color: transparent !important;
+  margin-top:15px;
 }
 
 widget img {
@@ -604,13 +609,13 @@ widget img {
 
 .post-tag {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 20px;
   height: 18px;
   z-index: 5;
   background-color: #025746;
   color: #fff;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -619,6 +624,11 @@ widget img {
 
 .post-tag a {
   color: #fff;
+}
+
+.avatar-container .author-name span, .avatar-container .author-description {
+  background: none;
+  color: #333;
 }
 
 .index-post .post-info {
@@ -647,7 +657,7 @@ widget img {
 .post-meta {
   overflow: hidden;
   color: #025746;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   padding: 0 1px;
@@ -710,6 +720,21 @@ a.read-more:after {
   margin: 0 0 40px;
 }
 
+.tags, .the-tags {
+  padding:10px;
+}
+
+.post-labels .the-tags {
+background:transparent;
+transition: 0.2s all;
+margin-left:10px;
+}
+
+.the-tags:hover a{
+  color:#fff!important;
+}
+
+
 
 .sidebar .widget {
   position: relative;
@@ -718,6 +743,23 @@ a.read-more:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0 0 35px;
+}
+
+.related h5{
+  min-height: 30px;
+}
+
+.related .title-wrap  {
+  margin-top:30px;
+}
+
+.related .title-wrap h3 {
+  color:#fff;
+  text-align:center;
+}
+
+.row.related .post-date {
+  background: none;
 }
 
 #footer-wrapper {
@@ -745,7 +787,7 @@ a.read-more:after {
 }
 
 #sub-footer-wrapper .copyright-area {
-  font-size: 12px;
+  font-size: 13px;
   display: block;
   height: 34px;
   line-height: 34px;
@@ -764,7 +806,7 @@ a.read-more:after {
   right: 25px;
   cursor: pointer;
   overflow: hidden;
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
   text-align: center;
   line-height: 32px;
@@ -819,6 +861,38 @@ a.read-more:after {
   }
 }
 @media screen and (max-width: 980px) {
+  .top-bar-nav {
+    display:none;
+  }
+
+  /*Mobile menu*/
+
+  .blog-post {
+    z-index:-1;
+  }
+
+  #sidebar-wrapper {
+    width: 100%;
+    padding: 0;
+    z-index: -1;
+}
+
+  #main-menu ul > li {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: background 0.17s;
+    top: 45px;
+    background: rgba(70, 70, 70, 0.9);
+}
+
+/*End of mobile*/
+
+  .sb-search{
+    top: 0;
+  }
+
   #content-wrapper > .container {
     margin: 0;
   }
@@ -926,34 +1000,7 @@ a.read-more:after {
   .index-post .post-image-wrap {
     margin: 0 0 15px;
   }
-  ul.related-posts {
-    margin: 0;
-  }
-  .related-posts .related-item {
-    width: 100%;
-    padding: 0;
-    margin: 20px 0 0;
-  }
-  .related-posts .item-0 {
-    margin: 0;
-  }
-  .related-posts .post-tag {
-    display: none;
-  }
-  .related-posts .post-image-link {
-    width: 80px;
-    height: 70px;
-    float: left;
-    margin: 0 12px 0 0;
-  }
-  .related-posts .post-title {
-    font-size: 13px;
-    overflow: hidden;
-    margin: 0 0 5px;
-  }
-  .post-reactions {
-    display: none;
-  }
+
 }
 @media screen and (max-width: 440px) {
   .hot-posts .hot-item.item-0 {
@@ -1067,7 +1114,7 @@ a.read-more:after {
 }
 
 .wp-caption p.wp-caption-text {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 17px;
   margin: 0;
   padding: 0 4px 5px;

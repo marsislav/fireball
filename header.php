@@ -56,12 +56,12 @@
                             <?php }?>
                             <?php if(get_theme_mod('fireball_viber_handle')){?>
                             <li class="viber"><a
-                                    href="viber://chat?number=<?php echo get_theme_mod('hs21_viber_handle')?>"
+                                    href="viber://chat?number=<?php echo esc_url(get_theme_mod('hs21_viber_handle'))?>"
                                     title="Viber"></a></li>
                             <?php }?>
                             <?php if(get_theme_mod('fireball_whatsapp_handle')){?>
                             <li class="whatsapp"><a
-                                    href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('hs21_whatsapp_handle')?>"
+                                    href="https://api.whatsapp.com/send?phone=<?php echo esc_url(get_theme_mod('hs21_whatsapp_handle'));?>"
                                     title="Whatsapp"></a></li>
                             <?php }?>
                             <?php if(get_theme_mod('fireball_github_handle')){?>
@@ -69,15 +69,17 @@
                                     target="_blank" title="Github"></a></li>
                             <?php }?>
                             <?php if(get_theme_mod('fireball_skype_handle')){?>
-                            <li class="skype"><a href="skype:<?php echo get_theme_mod('hs21_skype_handle')?>?chat"
+                            <li class="skype"><a
+                                    href="skype:<?php echo esc_url(get_theme_mod('hs21_skype_handle'));?>?chat"
                                     title="Skype"></a></li>
                             <?php }?>
                             <?php if(get_theme_mod('fireball_email_handle')){?>
-                            <li class="email"><a href="mailto:<?php echo get_theme_mod('hs21_email_handle')?>?chat"
+                            <li class="email"><a
+                                    href="mailto:<?php echo esc_url(get_theme_mod('hs21_email_handle'));?>?chat"
                                     title="Email"></a></li>
                             <?php }?>
                             <?php if(get_theme_mod('fireball_phone_handle')){?>
-                            <li class="phone"><a href="tel:<?php echo get_theme_mod('hs21_phone_handle')?>"
+                            <li class="phone"><a href="tel:<?php echo esc_url(get_theme_mod('hs21_phone_handle'));?>"
                                     title="Phone"></a></li>
                             <?php }?>
                         </ul>
@@ -122,7 +124,7 @@
             </ul>
         </div>
         <div class="container row">
-            <span class="slide-menu-toggle"></span>
+            <span class="slide-menu-toggle"><i class="fa-solid fa-bars"></i></span>
             <div class="main-menu section" id="main-menu" name="Main Menu">
                 <div class="widget LinkList show-menu">
                     <ul id="main-menu-nav" role="menubar">
