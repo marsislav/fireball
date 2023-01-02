@@ -18,9 +18,12 @@
                 <div class="widget LinkList">
                     <div class="widget-content">
                         <ul>
-                            <?php wp_nav_menu(array (
-                        'theme_location'=>'top'
-                    ));?>
+                            <?php 
+                            if(has_nav_menu('top')){
+                                wp_nav_menu(array (
+                                'theme_location'=>'top'
+                                ));
+                            }?>
                         </ul>
                     </div>
                 </div>
@@ -109,20 +112,49 @@
 
     </div>
     </header>
-    <div class="header-menu">
-        <div class="mobile-menu">
-            <ul id="main-menu-nav" role="menubar">
-                <?php 
-                                        if(has_nav_menu('main')){
-                                            wp_nav_menu([
-                                                'theme_location'=>'main',
-                                                'container'=>'li',
-                                                'fallback_cb'=>__('Main menu', 'fireball'),
-                                                'depth'=>1
-                                            ]);
-                                        }?>
-            </ul>
+
+    <div class="mobile-bar">
+        <div class="container">
+            <div class="row">
+                <div class="main">
+                    <button class="mobile-menu"><i class="fa-solid fa-bars"></i></button>
+
+                </div>
+
+            </div>
+
         </div>
+
+    </div>
+
+
+    <div class="modal">
+        <div class="content">
+            <a href="#"
+                class="times"><?php _e('<h3> <i class="fa fa-times"></i> Hide the navigation </h3>', 'fireball');?></a>
+            <?php 
+                if(has_nav_menu('top')){
+            _e('<h3>Top bar menu</h3>', 'fireball');
+        
+                    wp_nav_menu(array (
+                    'theme_location'=>'top'
+                    ));
+                }?>
+
+            <?php 
+                if(has_nav_menu('main')){
+                _e('<h3>Main menu</h3>', 'fireball');
+        
+                    wp_nav_menu(array (
+                    'theme_location'=>'main'
+                    ));
+                }?>
+
+        </div>
+
+
+    </div>
+    <div class="header-menu">
         <div class="container row">
             <span class="slide-menu-toggle"><i class="fa-solid fa-bars"></i></span>
             <div class="main-menu section" id="main-menu" name="Main Menu">
@@ -142,12 +174,16 @@
                 </div>
 
             </div>
-            <div id="nav-search">
-                <?php get_search_form( );?>
-            </div>
 
 
 
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="nav-search">
+            <?php get_search_form( );?>
         </div>
     </div>
 
